@@ -55,9 +55,8 @@ app = server.details(args.package)
 docid = app['docId']
 filename = docid + ".apk"
 print("Fetching docId", docid, "to file", filename)
-print(app)
+#print(app)
 
-sys.exit(1)
 fl = server.download(docid)
 with open(filename, 'wb') as apk_file:
     for chunk in fl.get('file').get('data'):
