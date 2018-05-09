@@ -53,7 +53,8 @@ server.login(None, None, int(gsfId), authSubToken)
 
 app = server.details(args.package)
 docid = app['docId']
-filename = docid + ".apk"
+ver = app["versionString"]
+filename = docid + "-" + ver + ".apk"
 print("Fetching docId", docid, "to file", filename)
 #print(app)
 
